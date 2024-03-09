@@ -1,0 +1,50 @@
+patch:
+  "switches/@0/reset": 1
+  schema_list/=:
+    - schema: moran
+    - schema: luna_pinyin
+  # schema_list:
+  #   - schema: luna_pinyin_simp
+  #   - schema: double_pinyin_flypy
+  #   - schema: flypy
+  "ascii_composer/switch_key/Shift_L": commit_code
+  key_binder/bindings/=:
+    - {accept: semicolon, send: 2, when: has_menu} #分号次选
+    # flip page
+    - { when: has_menu, accept: minus, send: Page_Up }
+    - { when: has_menu, accept: equal, send: Page_Down }
+    - { when: paging, accept: comma, send: Page_Up }
+    - { when: has_menu, accept: period, send: Page_Down }
+  punctuator/half_shape/=:
+    ',' : { commit: ， }
+    '.' : { commit: 。 }
+    '<' : 《
+    '>' :  》
+    '/' : '/'
+    '?' : { commit: ？ }
+    ';' : { commit: ； }
+    ':' : { commit: ： }
+    '''' : { pair: [ '‘', '’' ] }
+    '"' : { pair: [ '“', '”' ] }
+    '\' :  、
+    '|' : '|'
+    '`' : { commit: '`'}
+    '~' : [ '~', ～ ]
+    '!' : { commit: ！ }
+    '@' : '@'
+    '#' : '#'
+    '%' : [ '%', ％, '°', '℃' ]
+    '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤' ]
+    '^' : { commit: …… }
+    '&' : '&'
+    '*' : '*'
+    '(' : （
+    ')' : ）
+    '-' : '-'
+    '_' : _
+    '+' : '+'
+    '=' : '='
+    '[' : 【
+    ']' : 】
+    '{' : "{"
+    '}' : "}"

@@ -73,6 +73,7 @@ engine:
     - lua_translator@*moran_express_translator@with_reorder # 翻譯器
     - lua_translator@*moran_shijian        # 日期orq 節氣ojq 星期oxq 時間osj
     - lua_translator@*moran_number         # 數字轉大寫
+    # - script_translator # 没安装librime-lua时必须要script_translate才勉强能打字
   filters:
     - lua_filter@*moran_reorder_filter
     - lua_filter@*moran_aux_hint
